@@ -69,11 +69,12 @@ docker-compose -f .\docker\docker-compose.yml --project-directory . up --build
 │   │       ├───dto     # Объекты передачи данных для REST.
 │   │       │   ├───request  # Структуры входящих JSON-запросов.
 │   │       │   └───response # Структуры исходящих JSON-ответов.
-│   │       └───middleware # HTTP-промежуточное ПО: CORS, логирование.
+│   │       ├───middleware # HTTP-промежуточное ПО: CORS, логирование.
+│   │       └───mocks   # моки для Unit-тестирования ручек
 │   ├───logpack         # Реализация логирования log/slog над zap.
 │   └───usecase         # Слой сервисов приложения
 └───migrations          # Скрипты миграции БД.
     └───postgres        # SQL-файлы для goose.
 ```
 
-Все было реализовано, опираясь на принципы SPLID, DDD, clean architecture
+Все было реализовано, опираясь на принципы SOLID, DDD, clean architecture
